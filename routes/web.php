@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('book-test',function(){
     return view('book');
 })->name('book-test');
+Route::get('form',function(){
+    return view('form');
+})->name('form');

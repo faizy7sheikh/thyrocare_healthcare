@@ -30,43 +30,19 @@
       top: 80px;
       right: 20px;
       width: 300px;
+      margin-top: 28px;
+    }
+    .bookatest-logo{
+      margin-top: 108px;
     }
   </style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Your Logo</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Book a Test</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="badge badge-primary">0</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+<header>
+        @include('layouts.header')
+</header>
 <div class="container">
-  <h1>Book a Test</h1>
-  
+  <div class="bookatest-logo">
   <div class="row">
     <div class="col-md-8">
       <div class="row">
@@ -76,7 +52,7 @@
             <h5>Basic Health Package</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <a href="#" class="btn btn-primary">View</a>
-            <a href="#" class="btn btn-success">Book</a>
+            <a href="{{route('form')}}" class="btn btn-success">Book</a>
           </div>
         </div>
         <div class="col-md-4">
@@ -198,6 +174,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
