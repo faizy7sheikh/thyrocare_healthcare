@@ -5,6 +5,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     /* Default height for small devices */
+    .header-wrapper-area{
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 108px;
+      z-index: 105;
+      background-color: #fff;
+    }
     .slider-container {
       width: 100%;
       height: 400px;
@@ -20,9 +29,10 @@
 <body>
 
   <div class="container-fluid">
+    <div class="header-wrapper-area">
     <!-- Top Row -->
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 ">
         <img src="{{ asset('logo.png') }}" height="50" width="50" alt="Logo" class="img-fluid">
       </div>
     </div>
@@ -59,5 +69,6 @@
           </div>
         </nav>
       </div>
+    </div>
     </div>
   </div>

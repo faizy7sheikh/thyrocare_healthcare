@@ -20,6 +20,9 @@
         border: none;
         border-radius: 10px;
     }
+    .nav-bar-data-info{
+        margin-top: 108px;
+    }
         </style>
 </head>
 <body>
@@ -28,7 +31,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container nav-bar-data-info">
             @yield('content')
         </div>
     </main>
