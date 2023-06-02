@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackagesTable extends Migration
+class CreateTestTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreatePackagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('packages', function (Blueprint $table) {
+        Schema::create('test_types', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('test_id');
             $table->string('name');
-            $table->decimal('price', 8, 2)->nullable();
-            $table->string('image')->nullable();
-            $table->integer('order');
-            $table->string('description')->nullable();
-            $table->integer('discount')->default(0);
-            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->string('price')->nullable();
+            $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
+
+            $table->foreign('test_id')->references('id')->on('tests');
         });
     }
 
@@ -33,6 +32,6 @@ class CreatePackagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('packages');
+        Schema::dropIfExists('test_types');
     }
 }

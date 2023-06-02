@@ -48,12 +48,14 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Package 1',
                 'price' => 100.00,
+                'order' => 1,
                 'discount' =>20,
                 'status' => 'active'
             ],
             [
                 'name' => 'Package 2',
                 'price' => 200.00,
+                'order' => 2,
                 'discount' => 30,
                 'status' => 'inactive'
             ],

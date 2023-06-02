@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePackageTestTable extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreatePackageTestTable extends Migration
      */
     public function up()
     {
-        Schema::create('package_test', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('package_id');
-            $table->unsignedBigInteger('test_id');
-            
-            $table->foreign('package_id')->references('id')->on('packages');
-            $table->foreign('test_id')->references('id')->on('tests');
+            $table->unsignedBigInteger('user_id');
+            $table->decimal('total_amount', 8, 2);
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -31,6 +30,6 @@ class CreatePackageTestTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('package_test');
+        Schema::dropIfExists('orders');
     }
 }
