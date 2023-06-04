@@ -28,7 +28,7 @@ class TechnicianDetailController extends Controller
 
         TechnicianDetail::create($validatedData);
 
-        return redirect()->route('backend.staff.index')->with('success', 'Technician created successfully.');
+        return redirect()->route('technicians.index')->with('success', 'Technician created successfully.');
     }
 
     public function show(TechnicianDetail $technician)
@@ -51,14 +51,14 @@ class TechnicianDetailController extends Controller
 
         $technician->update($validatedData);
 
-        return redirect()->route('backend.staff.index')->with('success', 'Technician updated successfully.');
+        return redirect()->route('technicians.index')->with('success', 'Technician updated successfully.');
     }
 
     public function destroy(TechnicianDetail $technician)
     {
         $technician->delete();
 
-        return redirect()->route('backend.staff.index')->with('success', 'Technician deleted successfully.');
+        return redirect()->route('technicians.index')->with('success', 'Technician deleted successfully.');
     }
 }
 
