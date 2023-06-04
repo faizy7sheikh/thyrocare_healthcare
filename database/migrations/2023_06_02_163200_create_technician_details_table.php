@@ -15,13 +15,18 @@ class CreateTechnicianDetailsTable extends Migration
     {
         Schema::create('technician_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->string('mobile');
-            // Add any additional fields for technician details
+            $table->string('email')->unique();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->string('specialization')->nullable();
+            $table->string('workplace')->nullable();
+            $table->boolean('available')->default(true);
+            $table->enum('status',['active','inactive'])->default('active');
+            $table->integer('experience')->nullable();
+            $table->string('qualification')->nullable();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

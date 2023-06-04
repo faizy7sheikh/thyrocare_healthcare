@@ -3,6 +3,7 @@
 <head>
   <title>Book a Test</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <style>
     .cart-icon {
       position: fixed;
@@ -398,9 +399,28 @@
 
   // Event listener for selecting a test from the results
   $(document).on('click', '#testResults li', function() {
-    let testName = $(this).text();
-    let testPrice = $(this).data('price');
-    addToCart(testName, testPrice);
+    let listItem = $(this);
+    let testName = listItem.text();
+    let testPrice = listItem.data('price');
+
+    // Remove the selected list item from the results
+    listItem.remove();
+
+    // Call the API to process the selected test
+    $.ajax({
+      url: "{{ route('cart.add') }}", // Replace with your backend API endpoint
+      method: 'POST',
+      data: { name: testName, price: testPrice },
+      success: function(response) {
+        // Handle the API response
+
+        // Add the selected test to the cart or perform any other action
+        addToCart(testName, testPrice);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
   });
 
   // Function to add a test to the cart

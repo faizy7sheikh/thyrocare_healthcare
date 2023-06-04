@@ -68,9 +68,8 @@ class CartController extends Controller
     {
         $query = $request->input('query');
 
-        // Retrieve the test data based on the query (e.g., from a database)
         $tests = Test::where('name', 'like', '%' . $query . '%')->get();
-
+        
         return response()->json(['tests' => $tests]);
     }
 }
