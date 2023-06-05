@@ -16,7 +16,10 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->decimal('price', 8, 2);
+            $table->decimal('price', 8, 2)->nullable();
+            $table->string('image')->nullable();
+            $table->integer('order');
+            $table->string('description')->nullable();
             $table->integer('discount')->default(0);
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();

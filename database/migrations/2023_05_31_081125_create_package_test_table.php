@@ -17,6 +17,7 @@ class CreatePackageTestTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('package_id');
             $table->unsignedBigInteger('test_id');
+            
             $table->foreign('package_id')->references('id')->on('packages');
             $table->foreign('test_id')->references('id')->on('tests');
             $table->timestamps();

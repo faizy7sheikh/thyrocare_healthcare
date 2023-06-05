@@ -41,30 +41,30 @@
     <div class="row bg-primary">
       <div class="col-12">
         <nav class="navbar navbar-expand-lg navbar-dark ">
-          <a class="navbar-brand" href="#">Company Name</a>
+          <a class="navbar-brand" href="/">Company Name</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+              <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+                <a class="nav-link" href="/">Home</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item {{ Request::is('book-test') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('book-test') }}">Book a Test</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ">
                 <a class="nav-link" href="#">Blog</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+              <li class="nav-item ">
+                <a class="nav-link " href="#">About Us</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ">
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
             </ul>
-            <span class="navbar-text mr-3">
-              Call: 8250135043
+            <span class="navbar-text nav-item mr-3">
+             <a class="nav-link"  href="tel:+918250135043"> Call: 8250135043</a>
             </span>
           </div>
         </nav>
