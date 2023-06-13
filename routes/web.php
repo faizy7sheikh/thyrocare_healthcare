@@ -19,6 +19,9 @@ use App\Http\Controllers\Auth\LoginController;
 Route::get('test',function(){
     return view('frontend.layouts.app');
 });
+Route::get('test2',function(){
+    return view('frontend.home.index');
+});
 
 Route::get('/', function () {
     return view('welcome');
