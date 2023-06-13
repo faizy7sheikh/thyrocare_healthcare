@@ -4,7 +4,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ServiceAreaController;
 use App\Http\Controllers\TechnicianDetailController;
-use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Auth\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,9 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 |
 */
 
-
+Route::get('test',function(){
+    return view('frontend.layouts.app');
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,7 +32,7 @@ Route::get('form',function(){
 
 // backeend time
 Route::get('backend',function(){
-    return view('backend.layouts.app');
+    return view('frontend.layouts.app');
 });
 
 // admin login system
