@@ -60,104 +60,6 @@
   <div class="bookatest-logo">
   <div class="row">
     <div class="col-md-8">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="package-card">
-            <img src="{{ asset('package/3.jpg') }}" alt="Basic Health Package" class="package-image">
-            <h5>Basic Health Package</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">View</a>
-            <a href="{{route('form')}}" class="btn btn-success">Book</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="package-card">
-            <img src="{{ asset('package/1.jpg') }}" alt="Male Health Package" class="package-image">
-            <h5>Male Health Package</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">View</a>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-            <div class="package-card">
-              <img src="{{ asset('package/2.jpg') }}" alt="Basic Health Package" class="package-image">
-              <h5>Basic Health Package</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#" class="btn btn-primary">View</a>
-              <a href="#" class="btn btn-success">Book</a>
-            </div>
-        </div>
-        
-      </div>
-
-     
-
-      {{-- another --}}
-      <div class="row">
-        <div class="col-md-4">
-          <div class="package-card">
-            <img src="{{ asset('package/4.jpg') }}" alt="Basic Health Package" class="package-image">
-            <h5>Basic Health Package</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">View</a>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="package-card">
-            <img src="{{ asset('package/3.jpg') }}" alt="Male Health Package" class="package-image">
-            <h5>Male Health Package</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">View</a>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-            <div class="package-card">
-              <img src="{{ asset('package/3.jpg') }}" alt="Basic Health Package" class="package-image">
-              <h5>Basic Health Package</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#" class="btn btn-primary">View</a>
-              <a href="#" class="btn btn-success">Book</a>
-            </div>
-        </div>
-      </div>
-
-      {{-- another --}}
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="package-card">
-            <img src="{{ asset('package/4.jpg') }}" alt="Basic Health Package" class="package-image">
-            <h5>Basic Health Package</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">View</a>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="package-card">
-            <img src="{{ asset('package/3.jpg') }}" alt="Male Health Package" class="package-image">
-            <h5>Male Health Package</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-primary">View</a>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-            <div class="package-card">
-              <img src="{{ asset('package/3.jpg') }}" alt="Basic Health Package" class="package-image">
-              <h5>Basic Health Package</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#" class="btn btn-primary">View</a>
-              <a href="#" class="btn btn-success">Book</a>
-            </div>
-        </div>
-      </div>
-      
-      
-      <!-- Add more package cards here -->
       
     </div>
     <div class="col-md-4">
@@ -204,7 +106,7 @@
         <div class="card-header">
           <div class="row">
             <div class="col">
-              <h5>Package Name 1</h5>
+              <h5>Aarogya A</h5>
             </div>
             
           </div>
@@ -236,6 +138,24 @@
                   </ul>
                 </div>
               </div>
+              {{-- start --}}
+              <div class="card-header" id="headingtwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne1">
+                    Blood Test
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseOne2" class="collapse" aria-labelledby="headingtwo" data-parent="#accordionExample1">
+                <div class="card-body">
+                  <ul>
+                    <li>Test Description 1</li>
+                    <li>Test Description 2</li>
+                    <li>Test Description 3</li>
+                  </ul>
+                </div>
+              </div>
+              {{-- end --}}
             </div>
           </div>
         </div>
@@ -249,29 +169,30 @@
         <div class="card-header">
           <div class="row">
             <div class="col">
-              <h5>Package Name 2</h5>
+              <h5>Aarogyam B</h5>
             </div>
-            <div class="col">
-              <h5 class="text-right">Price: $99</h5>
-            </div>
+            
           </div>
-          <div class="row">
-            <div class="col">
-              <p>Total Tests: 10</p>
+          <div class="row bg-primary">
+            <div class="col-12 text-center">
+              <p><span class="rupee-symbol">&#8377;</span> 2200</p>
+            </div>
+            <div class="col-12 text-center">
+              <p class="test-text">20 Test</p>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <div class="accordion" id="accordionExample2">
+          <div class="accordion" id="accordionExample1">
             <div class="card">
-              <div class="card-header" id="headingOne2">
+              <div class="card-header" id="headingthree">
                 <h2 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
-                    Test Name 1
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#headingthree" aria-expanded="true" aria-controls="collapseOne1">
+                    Cardia risk Makers(2)
                   </button>
                 </h2>
               </div>
-              <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
+              <div id="headingthree" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample1">
                 <div class="card-body">
                   <ul>
                     <li>Test Description 1</li>
@@ -293,29 +214,30 @@
         <div class="card-header">
           <div class="row">
             <div class="col">
-              <h5>Package Name 3</h5>
+              <h5>Aarogyam C</h5>
             </div>
-            <div class="col">
-              <h5 class="text-right">Price: $99</h5>
-            </div>
+            
           </div>
-          <div class="row">
-            <div class="col">
-              <p>Total Tests: 10</p>
+          <div class="row bg-primary">
+            <div class="col-12 text-center">
+              <p><span class="rupee-symbol">&#8377;</span> 1200</p>
+            </div>
+            <div class="col-12 text-center">
+              <p class="test-text">10 Test</p>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <div class="accordion" id="accordionExample3">
+          <div class="accordion" id="accordionExample1">
             <div class="card">
-              <div class="card-header" id="headingOne3">
+              <div class="card-header" id="headingfour">
                 <h2 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
-                    Test Name 1
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#headingfour" aria-expanded="true" aria-controls="collapseOne1">
+                    Diabetes
                   </button>
                 </h2>
               </div>
-              <div id="collapseOne3" class="collapse" aria-labelledby="headingOne3" data-parent="#accordionExample3">
+              <div id="headingfour" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample1">
                 <div class="card-body">
                   <ul>
                     <li>Test Description 1</li>
@@ -335,6 +257,167 @@
   </div>
 </div>
 {{-- end --}}
+
+
+{{-- another row --}}
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col">
+              <h5>Aarogya A</h5>
+            </div>
+            
+          </div>
+          <div class="row bg-primary">
+            <div class="col-12 text-center">
+              <p><span class="rupee-symbol">&#8377;</span> 1200</p>
+            </div>
+            <div class="col-12 text-center">
+              <p class="test-text">10 Test</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="accordion" id="accordionExample1">
+            <div class="card">
+              <div class="card-header" id="headingOne1">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                    Test Name 1
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseOne1" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample1">
+                <div class="card-body">
+                  <ul>
+                    <li>Test Description 1</li>
+                    <li>Test Description 2</li>
+                    <li>Test Description 3</li>
+                  </ul>
+                </div>
+              </div>
+              {{-- start --}}
+              <div class="card-header" id="headingtwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne1">
+                    Blood Test
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseOne2" class="collapse" aria-labelledby="headingtwo" data-parent="#accordionExample1">
+                <div class="card-body">
+                  <ul>
+                    <li>Test Description 1</li>
+                    <li>Test Description 2</li>
+                    <li>Test Description 3</li>
+                  </ul>
+                </div>
+              </div>
+              {{-- end --}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary btn-block">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col">
+              <h5>Aarogyam B</h5>
+            </div>
+            
+          </div>
+          <div class="row bg-primary">
+            <div class="col-12 text-center">
+              <p><span class="rupee-symbol">&#8377;</span> 2200</p>
+            </div>
+            <div class="col-12 text-center">
+              <p class="test-text">20 Test</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="accordion" id="accordionExample1">
+            <div class="card">
+              <div class="card-header" id="headingthree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#headingthree" aria-expanded="true" aria-controls="collapseOne1">
+                    Cardia risk Makers(2)
+                  </button>
+                </h2>
+              </div>
+              <div id="headingthree" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample1">
+                <div class="card-body">
+                  <ul>
+                    <li>Test Description 1</li>
+                    <li>Test Description 2</li>
+                    <li>Test Description 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary btn-block">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col">
+              <h5>Aarogyam C</h5>
+            </div>
+            
+          </div>
+          <div class="row bg-primary">
+            <div class="col-12 text-center">
+              <p><span class="rupee-symbol">&#8377;</span> 1200</p>
+            </div>
+            <div class="col-12 text-center">
+              <p class="test-text">10 Test</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="accordion" id="accordionExample1">
+            <div class="card">
+              <div class="card-header" id="headingfour">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#headingfour" aria-expanded="true" aria-controls="collapseOne1">
+                    Diabetes
+                  </button>
+                </h2>
+              </div>
+              <div id="headingfour" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample1">
+                <div class="card-body">
+                  <ul>
+                    <li>Test Description 1</li>
+                    <li>Test Description 2</li>
+                    <li>Test Description 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary btn-block">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{-- end of another role --}}
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
