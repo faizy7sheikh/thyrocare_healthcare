@@ -269,6 +269,14 @@
                     transition: transform 0.3s ease;
                     }
                 /* end of sidebar css */
+
+                /* social media icon list */
+                .social-media-list {
+                    position: fixed;
+                    top: 50%; /* Adjust the vertical position as needed */
+                    right: 20px; /* Adjust the horizontal position as needed */
+                    transform: translateY(-50%);
+                }
     </style>
 </head>
 
@@ -352,7 +360,7 @@
                 </div>
                 <div class="row request-call-button">
                     <div class="col-12">
-                        <button class="btn btn-primary">Request Call</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Request Call</button>
                     </div>
                 </div>
             </div>
@@ -694,7 +702,62 @@
     </div>
   </footer>
   
+
+
+  {{-- social media icon list start --}}
+  <div class="social-media-list">
+    <div class="d-flex flex-column justify-content-center">
+      <a href="#" class="text-white mb-2"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white mb-2"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white mb-2"><i class="fab fa-google"></i></a>
+      <a href="#" class="text-white mb-2"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white mb-2"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="text-white mb-2"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+  {{-- social media icon list end --}}
+
+
+
       {{-- footer end --}}
+
+
+      {{-- form modal --}}
+      <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Request Callback</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputName">Enter Your Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Phone Number</label>
+                  <input type="text" class="form-control" id="phoneNumber" placeholder="XXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-success btn-lg" id="proceedBtn">Proceed</button>
+                </div>
+                <div class="form-group">
+                  <p>
+                    By clicking continue, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
+                  </p>
+                  <p><span class="note">Note:</span> I allow Thyrocare to call/WhatsApp/Mail/SMS.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {{-- end form modal --}}
       {{-- javascript for slick slider --}}
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
