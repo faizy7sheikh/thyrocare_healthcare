@@ -23,6 +23,12 @@ Route::get('test2',function(){
     return view('frontend.home.index');
 });
 
+Route::get('booktest',[CartController::class, 'bookTest']);
+
+Route::get('confirmed',function(){
+    return view('frontend.home.success');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -89,3 +95,40 @@ Route::delete('/technicians/{technician}', [TechnicianDetailController::class, '
 
 // slots for appointment
 Route::resource('available_slots', AvailableSlotController::class);
+
+
+
+Route::post('/submit-order', 'OrderController@store')->name('order.store');
+
+// Order management routes
+Route::get('/orders', 'OrderController@index')->name('order.index');
+Route::get('/orders/{order}', 'OrderController@show')->name('order.show');
+Route::put('/orders/{order}', 'OrderController@update')->name('order.update');
+Route::delete('/orders/{order}', 'OrderController@destroy')->name('order.destroy');
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::group(['middleware' => 'auth'], function () {
+    // Routes for admin
+    Route::group(['middleware' => 'admin'], function () {
+        // Add your admin-specific routes here
+        Route::resource('admin/packages', 'AdminPackageController');
+        Route::resource('admin/tests', 'AdminTestController');
+    });
+
+    // Routes for users
+    Route::group(['middleware' => 'user'], function () {
+        // Add your user-specific routes here
+        Route::get('/', [CartController::class, 'index'])->name('cart.index');
+        Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('cart.add');
+        Route::post('/remove-from-cart', [CartController::class, 'removeFromCart'])->name('cart.remove');
+        Route::post('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+    });
+
+    // Routes for technicians and above
+    Route::group(['middleware' => 'technician'], function () {
+        // Add your technician-specific routes here
+    });
+});

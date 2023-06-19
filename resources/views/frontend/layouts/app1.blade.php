@@ -24,39 +24,60 @@
 <body>
   
 
-  <nav class="navbar navbar-expand-lg sticky-top bg-tcNeutral-0">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <img src="https://web-assets.thyrocare.com/thyrocare-consumer/_next/images/logo.svg?w=384&amp;q=75" alt="thyrocare logo" width="148" height="56">
-      </a>
-      <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#pincodePanel" aria-controls="pincodePanel">
-        Check pincode
-        <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
-          <path d="M1 6.5L4 3.5L1 0.5" stroke="#4F585E" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/book-a-test">Book a test</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/location">Labs Near Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/franchisee/register">Become a Thyrocare Partner</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/offer">My Offers</a>
-          </li>
-        </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        home
       </div>
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginPanel" aria-controls="loginPanel">Login</button>
     </div>
-  </nav>
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg sticky-top bg-tcNeutral-0">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img src="https://web-assets.thyrocare.com/thyrocare-consumer/_next/images/logo.svg?w=384&amp;q=75"
+                            alt="thyrocare logo" width="148" height="56">
+                    </a>
+                    <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#pincodePanel" aria-controls="pincodePanel">
+                        Check pincode
+                        <svg width="5" height="7" viewBox="0 0 5 7" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="ml-2">
+                            <path d="M1 6.5L4 3.5L1 0.5" stroke="#4F585E" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/book-a-test">Book a test</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/location">Labs Near Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/franchisee/register">Become a Thyrocare Partner</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/offer">My Offers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#loginPanel" aria-controls="loginPanel">Login</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Rest of your content -->
+
+</div>
+  
   <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenu">
     <div class="offcanvas-header">
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></.

@@ -7,6 +7,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px !important;
+    padding-top: 20px !important;
+    padding-bottom: 27px !important;
+
 }
 
 #selectpicker {
@@ -20,7 +24,8 @@ img {
 .navbar{
     text-align: center;
     background-color: black;
-    justify-content: center;
+    justify-content: center !important;
+    padding: 0 !important;
   }
 
   .navbar ul {
@@ -76,10 +81,10 @@ img {
   gap: 50px;
 
   }
-  .card{
+  /* .card{
     width: 255px;
     height: 300px;
-  }
+  } */
   .footer-card-1{
     position: relative;
     bottom: -48px;
